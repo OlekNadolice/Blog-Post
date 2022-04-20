@@ -23,4 +23,4 @@ As an Administrator:
 
 # Screenshots
 
-<img src='./images/foto1.png'>
+<img src='/images/foto1.png'>
