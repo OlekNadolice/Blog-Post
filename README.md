@@ -24,3 +24,7 @@ As an Administrator:
 # Screenshots
 
 <img src='./src/images/foto1.png'>
+<img src='./src/images/foto2.png'>
+<img src='./src/images/foto3.png'>
+<img src='./src/images/foto4.png'>
+<img src='./src/images/foto5.png'>
