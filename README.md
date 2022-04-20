@@ -31,3 +31,4 @@ As an Administrator:
 <img src='./src/images/foto6.png'>
 <img src='./src/images/foto7.png'>
 <img src='./src/images/foto8.png'>
+<img src='./src/images/foto9.png'>
