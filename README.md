@@ -18,7 +18,7 @@ As an Administrator:
 
 # Reflections
 
-- It was really small projects, I've used a lot of inline styles which makes me code look like spagetti. With this small project is doesn't matter but Im aware that in the real world it would not be so great solution.
+- It was really small project, I've used a lot of inline styles which makes my code look like spagetti. With this small project is doesn't matter but Im aware that in the real world it would not be so great solution.
 - I choose Type Script to practise this language more and I've realized that its a better way to write application, with the help of the interfaces I knew very quickly what props component is taking.
 
 # Screenshots
