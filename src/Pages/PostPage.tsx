@@ -29,6 +29,7 @@ const PostPage = () => {
   const [commentInput, setCommentInput] = useState("");
   const [comments, setComments] = useState<CommentProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   let { id } = useParams();
   id = id?.split(":")[1];
@@ -49,7 +50,7 @@ const PostPage = () => {
         setCommentInput("");
       }
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 
@@ -79,7 +80,12 @@ const PostPage = () => {
 
                 setComments(comments);
               });
+          } else {
+            setError("Could not find the resources");
           }
+        })
+        .catch(err => {
+          setError(err);
         })
         .finally(() => {
           setIsLoading(false);
@@ -138,10 +144,21 @@ const PostPage = () => {
         </Box>
       </Box>
     );
-  } else if (isLoading) {
-    return <Loading />;
+  } else if (error) {
+    return (
+      <div
+        style={{
+          height: "90vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h5">{error}</Typography>
+      </div>
+    );
   } else {
-    return <div>Not found</div>;
+    return <Loading />;
   }
 };
 

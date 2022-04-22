@@ -8,9 +8,9 @@ import Loading from "Components/Loading";
 const Login = lazy(() => import("Pages/Login"));
 const Register = lazy(() => import("Pages/Register"));
 const Home = lazy(() => import("Pages/Home"));
-const Admin = lazy(() => import("Pages/Admin"));
 const PostPage = lazy(() => import("Pages/PostPage"));
 const NotFound = lazy(() => import("Pages/NotFound"));
+
 const RoutesDefinition = () => {
   const { isLoggedIn } = useContext(LoginContext);
 
@@ -19,10 +19,6 @@ const RoutesDefinition = () => {
       <Suspense fallback={<Loading />}>
         <Navbar />
         <Routes>
-          <Route
-            path="/admin"
-            element={isLoggedIn ? <Admin /> : <Navigate to="/login" />}
-          />
           <Route path="/login" element={!isLoggedIn ? <Login /> : <Navigate to="/" />} />
           <Route path="/register" element={<Register />} />
           <Route path="/post:id" element={<PostPage />} />
